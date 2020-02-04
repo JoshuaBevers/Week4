@@ -20,3 +20,9 @@ span {
   font-weight: bolder;
   text-decoration: underline;
 }
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}

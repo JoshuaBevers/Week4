@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Josh's edit</title>
+  </head>
+
+  <body>
+    <img class="libs" src="pics/Madlib.png" />
+    <p>
+      This element is created. Spawn the battleground!
+      <span id="noun1">Noun 1</span> Looks like that failed. Oops! I guess even
+      Pikaard can't fix this. What if they wake up and start attacking us?
+      <span id="noun2">Noun 2</span> efficitur accumsan lectus, eget hendrerit
+      mi malesuada nec. Phasellus egestas massa sed massa laoreet vehicula. Orci
+      varius natoque penatibus et magnis dis parturient montes, nascetur
+      ridiculus mus.
+    </p>
+    <p>
+      <span id="noun3">Noun 3</span> Aenean eget accumsan metus, vitae
+      scelerisque lectus. Phasellus cursus lorem augue, sit amet tincidunt nulla
+      iaculis sit amet. Vivamus iaculis sodales consectetur. Proin imperdiet
+      odio nec tellus luctus porttitor. Phasellus tristique eget dui ut
+      convallis. Vestibulum suscipit, magna eget maximus condimentum, nunc enim
+      placerat orci, ut dapibus diam diam sed libero. In tincidunt, velit quis
+      suscipit accumsan, sapien lacus consequat arcu, vel venenatis lacus leo in
+      quam. Aliquam euismod nibh nulla.
+    </p>
+    <form>
+      <label
+        >A Noun:
+        <input type="text" id="noun1Input" value="" />
+        <button type="button" id="clickMe">Submit</button>
+      </label>
+      <label
+        >Another Noun:
+        <input type="text" id="noun2Input" value="" />
+        <button type="button" id="clickMe2">Submit</button>
+      </label>
+      <label
+        >Another 'nother Noun:
+        <input type="text" id="noun3Input" value="" />
+      </label>
+      <button type="button" id="clickMe3">Click Me</button>
+    </form>
+  </body>
+  <script>
+    const myButton = document.getElementById("clickMe");
+    const myButton2 = document.getElementById("clickMe2");
+    const myButton3 = document.getElementById("clickMe3");
+
+    const noun1 = document.getElementById("noun1");
+    const noun1Input = document.getElementById("noun1Input");
+    const noun2 = document.getElementById("noun2");
+    const noun2Input = document.getElementById("noun2Input");
+    const noun3 = document.getElementById("noun3");
+    const noun3Input = document.getElementById("noun3Input");
+
+    myButton.addEventListener("click", function(e) {
+      e.preventDefault();
+      noun1.innerHTML = noun1Input.value;
+    });
+    myButton2.addEventListener("click", function(e) {
+      e.preventDefault();
+      noun2.innerHTML = noun2Input.value;
+    });
+    myButton3.addEventListener("click", function(e) {
+      e.preventDefault();
+      noun3.innerHTML = noun3Input.value;
+    });
+  </script>
+</html>

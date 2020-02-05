@@ -11,7 +11,6 @@ button {
 
 .libs {
   width: 140px;
-  margin-left: 50%;
 }
 
 span {
@@ -26,3 +25,33 @@ label {
   flex-direction: column;
   width: 300px;
 }
+.topimage {
+  text-align: center;
+  margin: 5% auto;
+}
+
+.Selector {
+  justify-content: center;
+  background-color: tomato;
+  padding: 5px;
+  height: 20px;
+  margin: 10px;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.Aligner {
+  margin-top: 20px;
+  width: 150px;
+  flex-direction: column;
+  align-items: column;
+  color: white;
+}
+
+/* 
+.Aligner.Buttons {
+} */

@@ -5,31 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Josh's edit</title>
+    <title>Madlib!</title>
   </head>
 
   <body>
-    <img class="libs" src="pics/Madlib.png" />
+    <div class="topimage"><img class="libs" src="pics/Madlib.png" /></div>
     <p>
       This element is created. Spawn the battleground!
-      <span id="noun1">Noun 1</span> Looks like that failed. Oops! I guess even
-      Pikaard can't fix this. What if they wake up and start attacking us?
-      <span id="noun2">Noun 2</span> efficitur accumsan lectus, eget hendrerit
-      mi malesuada nec. Phasellus egestas massa sed massa laoreet vehicula. Orci
-      varius natoque penatibus et magnis dis parturient montes, nascetur
-      ridiculus mus.
+      <span class="paragraph" id="noun1">Noun 1</span> Looks like that failed.
+      Oops! I guess even Pikaard can't fix this. What if they wake up and start
+      attacking us? <span class="paragraph" id="noun2">Noun 2</span> efficitur
+      accumsan lectus, eget hendrerit mi malesuada nec. Phasellus egestas massa
+      sed massa laoreet vehicula. Orci varius natoque penatibus et magnis dis
+      parturient montes, nascetur ridiculus mus.
     </p>
     <p>
-      <span id="noun3">Noun 3</span> Aenean eget accumsan metus, vitae
-      scelerisque lectus. Phasellus cursus lorem augue, sit amet tincidunt nulla
-      iaculis sit amet. Vivamus iaculis sodales consectetur. Proin imperdiet
-      odio nec tellus luctus porttitor. Phasellus tristique eget dui ut
+      <span class="paragraph" id="noun3">Noun 3</span> Aenean eget accumsan
+      metus, vitae scelerisque lectus. Phasellus cursus lorem augue, sit amet
+      tincidunt nulla iaculis sit amet. Vivamus iaculis sodales consectetur.
+      Proin imperdiet odio nec tellus luctus porttitor. Phasellus tristique eget
+      dui ut
+      <span class="paragraph" id="adj1">Adjective 1</span>
       convallis. Vestibulum suscipit, magna eget maximus condimentum, nunc enim
       placerat orci, ut dapibus diam diam sed libero. In tincidunt, velit quis
       suscipit accumsan, sapien lacus consequat arcu, vel venenatis lacus leo in
       quam. Aliquam euismod nibh nulla.
     </p>
-    <form>
+
+    <form class="Aligner">
       <label
         >A Noun:
         <input type="text" id="noun1Input" value="" />
@@ -45,12 +48,23 @@
         <input type="text" id="noun3Input" value="" />
       </label>
       <button type="button" id="clickMe3">Submit N3</button>
+      <label
+        >Adjective 1:
+        <input type="text" id="adj1Input" value="" />
+      </label>
+      <button type="button" id="clickMe4">Submit ADJ1</button>
     </form>
+
+    <button id="Selector">
+      THE SELECTORRR!
+    </button>
   </body>
+
   <script>
     const myButton = document.getElementById("clickMe");
     const myButton2 = document.getElementById("clickMe2");
     const myButton3 = document.getElementById("clickMe3");
+    const myButton4 = document.getElementById("clickMe4");
 
     const noun1 = document.getElementById("noun1");
     const noun1Input = document.getElementById("noun1Input");
@@ -59,17 +73,49 @@
     const noun3 = document.getElementById("noun3");
     const noun3Input = document.getElementById("noun3Input");
 
+    const adj1 = document.getElementById("adj1");
+    const adj1Input = document.getElementById("adj1Input");
+
+    const innerHTMLList = document.querySelectorAll(".paragraph");
+    const selectorInput = document.querySelectorAll("input");
+
     myButton.addEventListener("click", function(e) {
       e.preventDefault();
       noun1.innerHTML = noun1Input.value;
     });
+
     myButton2.addEventListener("click", function(e) {
       e.preventDefault();
       noun2.innerHTML = noun2Input.value;
     });
+
     myButton3.addEventListener("click", function(e) {
       e.preventDefault();
       noun3.innerHTML = noun3Input.value;
     });
+
+    myButton4.addEventListener("click", function(e) {
+      e.preventDefault();
+      adj1.innerHTML = adj1Input.value;
+    });
+
+    Selector.addEventListener("click", function(e) {
+      const tempArray = [
+        noun1Input.value,
+        noun2Input.value,
+        noun3Input.value,
+        adj1Input.value
+      ];
+      e.preventDefault();
+
+      innerHTMLList.forEach((list, index) => {
+        console.log(list);
+        list.innerHTML = tempArray[index];
+      });
+    });
+
+    function setHTMLData(id) {}
+    // console.log(tempArray[index])
+    // tempArray[index] = array.value)
   </script>
 </html>

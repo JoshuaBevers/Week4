@@ -1,0 +1,12 @@
+input {
+  border-color: black;
+}
+
+.inputBoxes {
+  display: flex;
+  justify-content: center;
+}
+
+.mainBox {
+  border-color: orange;
+}

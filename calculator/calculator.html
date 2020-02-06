@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>HTML Calculator</title>
+    <link rel="stylesheet" href="calc.css" />
+    <script type="text/javascript" src="calcfunc.js"></script>
+  </head>
+  <body text="red">
+    <form name="calculator">
+      <textarea
+        disabled
+        class="window"
+        type="text"
+        id="view"
+        value=""
+      ></textarea>
+
+      <div class="calcRow">
+        <button class="calcButton" type="button" onClick="add1();">1</button>
+        <button class="calcButton" type="button" value="2" onClick="add2();">
+          2
+        </button>
+        <button class="calcButton" type="button" value="3" onClick="add3();">
+          3
+        </button>
+      </div>
+      <div class="calcRow">
+        <button class="calcButton" type="button" onClick="add4();">4</button>
+        <button class="calcButton" type="button" value="5" onClick="add5();">
+          5
+        </button>
+        <button class="calcButton" type="button" value="6" onClick="add6();">
+          6
+        </button>
+      </div>
+      <div class="calcRow">
+        <button class="calcButton" type="button" onClick="add7();">7</button>
+        <button class="calcButton" type="button" value="8" onClick="add8();">
+          8
+        </button>
+        <button class="calcButton" type="button" value="8" onClick="add9();">
+          9
+        </button>
+      </div>
+      <div class="calcRow">
+        <button class="calcButton" type="button" onClick="addPlus();">+</button>
+        <button
+          class="calcButton"
+          type="button"
+          value="-"
+          onClick="addMinus();"
+        >
+          -
+        </button>
+        <button
+          class="calcButton"
+          type="button"
+          value="/"
+          onClick="addDivide();"
+        >
+          /
+        </button>
+      </div>
+      <div class="calcRow">
+        <button class="calcButton" type="button" onClick="addMultiply();">
+          *
+        </button>
+        <button class="calcButton" type="button" value="=" onClick="equals();">
+          =
+        </button>
+        <button class="calcButton" type="button" value="ac" onClick="AC();">
+          A/C
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
